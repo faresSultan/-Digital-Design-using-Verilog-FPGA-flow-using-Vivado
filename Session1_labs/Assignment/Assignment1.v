@@ -17,7 +17,7 @@ wire AND1, XNOR1;
 assign AND1 = A&B&C;
 assign XNOR1 = D ~^ E ~^ F;
 
-mux2 m1 (.sel(Sel), .in0(AND1), .in1(XNOR1),.Out(Out));
+mux2 m1 (.sel(Sel), .in0(AND1), .in1(XNOR1),.out(Out));
 assign Out_bar = !Out;
 
     
