@@ -72,31 +72,47 @@
 
 /*-----Q5-----*/
 
-module comparator_4bits (A,B,G,L,E);
+// module comparator_4bits (A,B,G,L,E);
 
-input [3:0] A,B;
-output reg G,L,E;
-always @(*) begin
+// input [3:0] A,B;
+// output reg G,L,E;
+// always @(*) begin
 
-if (A>B) begin
-    G = 1;
-    L = 0;
-    E = 0;
-end
-else if (A === B) begin
-    G = 0;
-    L = 0;
-    E = 1;
-end
-else if (A < B) begin
-    G = 0;
-    L = 1;
-    E = 0;
-end
-else begin
-    G = 0;
-    L = 0 ;
-    E = 0;
-end
-end 
+// if (A>B) begin
+//     G = 1;
+//     L = 0;
+//     E = 0;
+// end
+// else if (A === B) begin
+//     G = 0;
+//     L = 0;
+//     E = 1;
+// end
+// else if (A < B) begin
+//     G = 0;
+//     L = 1;
+//     E = 0;
+// end
+// else begin
+//     G = 0;
+//     L = 0 ;
+//     E = 0;
+// end
+// end 
+// endmodule
+
+
+/*---------------------------------ASSIGNMENT1_EXTRA---------------------------------*/
+
+/*-----Q1-----*/
+module F (A,out);
+
+input [3:0] A;
+output out;
+
+    and(AND1, A[2], !A[3]);
+    and(AND2, !A[3], A[1], A[0]);
+    or(out,AND1,AND2);
+
+    
 endmodule
