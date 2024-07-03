@@ -43,7 +43,7 @@ output reg [3:0] D;
 
 always @(*) begin
     
-    case ({A[1],A[0]})
+    case (A)
 
     2'b00: D = 'b0001;
     2'b01: D = 'b0010;
