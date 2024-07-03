@@ -7,6 +7,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -25,17 +26,17 @@ Z3 o-quiet -auto_acc_if_foreign -work work +acc
 Z4 tCvgOpt 0
 n@_opt
 Z5 OL;O;2021.1;73
+R1
 T_opt1
-!s110 1720021748
-VBi25d2553foLl28SbakM33
-04 10 4 work adder_4bit fast 0
-=1-ccf9e498c556-668572f1-10a-5280
+!s110 1720029717
+V7_c`mzTa><>j_b=Rf9>G61
+04 16 4 work comparator_4bits fast 0
+=1-ccf9e498c556-66859212-1e6-6398
 R2
 R3
 R4
 n@_opt1
 R5
-R1
 T_opt2
 !s110 1720024205
 Vdn]@kn?=h3fWZBg@=ab9:1
@@ -68,6 +69,28 @@ Z11 !s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Viv
 Z12 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session1_labs\Assignment\Assignment1.v|
 !i113 0
 Z13 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vcomparator_4bits
+!s110 1720029670
+!i10b 1
+!s100 FMQ5=Q>=`=0]>cK4Fh3Dn1
+IVL2fch30aI_fkR:6ViH^=3
+R6
+w1720029641
+R7
+R8
+!i122 11
+L0 75 28
+R9
+R10
+r1
+!s85 0
+31
+!s108 1720029670.000000
+R11
+R12
+!i113 0
+R13
 R4
 vDec2_4
 !s110 1720024193
