@@ -23,13 +23,37 @@
 // endmodule
 
 
-/*-----Q2-----*/
+// /*-----Q2-----*/
 
-module adder_4bit (A,B,Sum);
+// module adder_4bit (A,B,Sum);
 
-input [3:0] A,B;
-output [4:0] Sum;
+// input [3:0] A,B;
+// output [4:0] Sum;
 
-assign Sum = A+B;
+// assign Sum = A+B;
+    
+// endmodule
+
+/*-----Q3-----*/
+
+module Dec2_4 (A,D);
+
+input reg [1:0] A;
+output reg [3:0] D;
+
+always @(*) begin
+    
+    case ({A[1],A[0]}):
+
+    2'b00: D = 'b0001;
+    2'b01: D = 'b0010;
+    2'b10: D = 'b0100;
+    2'b11: D = 'b1000;
+        
+    default:
+    D = 'b0000; 
+
+    endcase
+end
     
 endmodule
