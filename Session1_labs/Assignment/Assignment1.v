@@ -59,12 +59,21 @@
 // endmodule
 
 
-/*-----Q4-----*/
+// /*-----Q4-----*/
 
-module EvenParityDet (A,out_with_parity);
+// module EvenParityDet (A,out_with_parity);
 
-input [7:0] A;
-output [8:0] out_with_parity;
-assign out_with_parity = {A[7:0], ^A};
+// input [7:0] A;
+// output [8:0] out_with_parity;
+// assign out_with_parity = {A[7:0], ^A};
+    
+// endmodule
+
+
+/*-----Q5-----*/
+
+module comparator_4bits (A,B,G,L,E);
+
+input [3:0] A,B;
     
 endmodule
