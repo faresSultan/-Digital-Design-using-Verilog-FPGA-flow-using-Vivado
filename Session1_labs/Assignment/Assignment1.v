@@ -75,5 +75,28 @@
 module comparator_4bits (A,B,G,L,E);
 
 input [3:0] A,B;
-    
+output reg G,L,E;
+always @(*) begin
+
+if (A>B) begin
+    G = 1;
+    L = 0;
+    E = 0;
+end
+else if (A === B) begin
+    G = 0;
+    L = 0;
+    E = 1;
+end
+else if (A < B) begin
+    G = 0;
+    L = 1;
+    E = 0;
+end
+else begin
+    G = 0;
+    L = 0 ;
+    E = 0;
+end
+end 
 endmodule
