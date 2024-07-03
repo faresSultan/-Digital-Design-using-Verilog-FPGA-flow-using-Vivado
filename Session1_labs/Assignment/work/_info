@@ -33,6 +33,7 @@ R3
 R4
 n@_opt1
 R5
+R1
 vadder_4bit
 !s110 1720021638
 !i10b 1
@@ -55,6 +56,29 @@ Z12 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-
 !i113 0
 Z13 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R4
+vDec2_4
+!s110 1720023892
+!i10b 1
+!s100 bzPn=9f8jg3l8z5Ide3K:2
+IKG>:LZk6a]^9Y3Q`hgzf70
+R6
+w1720023887
+R7
+R8
+!i122 8
+L0 39 21
+R9
+R10
+r1
+!s85 0
+31
+!s108 1720023892.000000
+R11
+R12
+!i113 0
+R13
+R4
+n@dec2_4
 vfunc
 Z14 !s110 1720015163
 !i10b 1

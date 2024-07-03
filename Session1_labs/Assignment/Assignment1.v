@@ -38,7 +38,7 @@
 
 module Dec2_4 (A,D);
 
-input reg [1:0] A;
+input [1:0] A;
 output reg [3:0] D;
 
 always @(*) begin
