@@ -34,26 +34,37 @@
     
 // endmodule
 
-/*-----Q3-----*/
+// /*-----Q3-----*/
 
-module Dec2_4 (A,D);
+// module Dec2_4 (A,D);
 
-input [1:0] A;
-output reg [3:0] D;
+// input [1:0] A;
+// output reg [3:0] D;
 
-always @(*) begin
+// always @(*) begin
     
-    case (A)
+//     case (A)
 
-    2'b00: D = 'b0001;
-    2'b01: D = 'b0010;
-    2'b10: D = 'b0100;
-    2'b11: D = 'b1000;
+//     2'b00: D = 'b0001;
+//     2'b01: D = 'b0010;
+//     2'b10: D = 'b0100;
+//     2'b11: D = 'b1000;
         
-    default:
-    D = 'b0000; 
+//     default:
+//     D = 'b0000; 
 
-    endcase
-end
+//     endcase
+// end
+    
+// endmodule
+
+
+/*-----Q4-----*/
+
+module EvenParityDet (A,out_with_parity);
+
+input [7:0] A;
+output [8:0] out_with_parity;
+assign out_with_parity = {A[7:0], ^A};
     
 endmodule
