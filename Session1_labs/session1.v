@@ -1,6 +1,6 @@
 
 
-module mux(in0,in1,sel,out);
+module mux2(in0,in1,sel,out);
 
     input in0, in1, sel;
     output out;
