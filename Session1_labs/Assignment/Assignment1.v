@@ -116,14 +116,26 @@
   
 // endmodule
 
-/*-----Q3-----*/
+// /*-----Q3-----*/
 
-module F (A,B,C,func);
+// module F (A,B,C,func);
 
-input A,B,C;
-output func
-xor (G1,A,B);
-xnor (G2,C,B);
-and (func,C,G1,G2);
+// input A,B,C;
+// output func
+// xor (G1,A,B);
+// xnor (G2,C,B);
+// and (func,C,G1,G2);
     
+// endmodule
+
+/*-----Q4-----*/
+module PN (A,PN);
+    
+    input [2:0] A;
+    output PN;
+
+    and (G1,!A[2],A[1]);
+    and (G2,A[2],A[0]);
+    or (PN, G1, G2);
+
 endmodule
