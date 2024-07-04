@@ -9,6 +9,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -18,16 +19,15 @@ R0
 cModel Technology
 Z1 dC:/questasim64_2021.1/examples
 T_opt
-!s110 1720028405
-V88DPc[kzX^fLHWRE]@74:1
-04 13 4 work EvenParityDet fast 0
-=1-ccf9e498c556-66858cef-3d2-2854
+!s110 1720087253
+V]D_RS5BX=S7IOZ>GD]<bQ0
+04 2 4 work PN fast 0
+=1-ccf9e498c556-668672d2-32e-29d4
 Z2 !s124 OEM100
 Z3 o-quiet -auto_acc_if_foreign -work work +acc
 Z4 tCvgOpt 0
 n@_opt
 Z5 OL;O;2021.1;73
-R1
 T_opt1
 !s110 1720029717
 V7_c`mzTa><>j_b=Rf9>G61
@@ -49,6 +49,7 @@ R3
 R4
 n@_opt2
 R5
+R1
 vadder_4bit
 !s110 1720021638
 !i10b 1
@@ -206,3 +207,26 @@ R12
 !i113 0
 R13
 R4
+vPN
+!s110 1720087234
+!i10b 1
+!s100 >>V?`Vz6X]bc[BKa>DAc50
+I>N=9`Jf@R8dzSP7<nGQo>1
+R6
+w1720087215
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session1_labs/Assignment/Assignment1.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session1_labs/Assignment/Assignment1.v
+!i122 13
+L0 132 10
+R9
+R10
+r1
+!s85 0
+31
+!s108 1720087234.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session1_labs/Assignment/Assignment1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session1_labs/Assignment/Assignment1.v|
+!i113 0
+R13
+R4
+n@p@n
