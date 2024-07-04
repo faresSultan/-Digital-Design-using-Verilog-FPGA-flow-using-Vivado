@@ -118,8 +118,12 @@
 
 /*-----Q3-----*/
 
-module F (
-    ports
-);
+module F (A,B,C,func);
+
+input A,B,C;
+output func
+xor (G1,A,B);
+xnor (G2,C,B);
+and (func,C,G1,G2);
     
 endmodule
