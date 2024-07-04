@@ -128,14 +128,44 @@
     
 // endmodule
 
-/*-----Q4-----*/
-module PN (A,PN);
+// /*-----Q4-----*/
+// module PN (A,PN);
     
-    input [2:0] A;
-    output PN;
+//     input [2:0] A;
+//     output PN;
 
-    and (G1,!A[2],A[1]);
-    and (G2,A[2],A[0]);
-    or (PN, G1, G2);
+//     and (G1,!A[2],A[1]);
+//     and (G2,A[2],A[0]);
+//     or (PN, G1, G2);
 
+// endmodule
+
+
+/*-----Q5-----*/
+
+module ALU_1bit (A,B,Ainvert,Binvert,Cin,op,Result,Cout);
+
+module adder_sub1 (A,B,carryin,inv,R,carryout)
+
+    input A,B,inv,carryin;
+    output reg R,carryout;
+
+    always @(*) begin
+
+        if (inv == 0) begin
+             {carryout,R} = A+B+carryin;
+        end
+        
+    end
+
+ endmodule
+
+input A,B,Ainvert,Binvert,Cin;
+input [1:0] op;
+output Result,Cout;
+
+assign Result = (op === 'b00) ? A&B : (op === 'b01) ? A|B : <default_value>);
+
+
+    
 endmodule
