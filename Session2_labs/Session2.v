@@ -8,7 +8,7 @@ input [1:0] ALU_OP;
 output reg [N-1:0] RES;
 
 always @(*) begin
-case ({ALU_OP[1],ALU_OP[0]}):
+case ({ALU_OP[1],ALU_OP[0]})
 
     2'b00: RES = A+B;
     2'b01: RES = A-B;
