@@ -9,7 +9,7 @@ mux3_1_always DUT_2 (.D0(D0_tb),.D1(D1_tb),.D2(D2_tb),.S0(S0_tb),.S1(S1_tb),.Y(Y
     integer i;
 
     initial begin
-        for(i=0,i<99,i = i+1)begin
+        for(i=0;i<99;i = i+1)begin
             D0_tb = $random;
             D1_tb = $random;
             D2_tb = $random;
