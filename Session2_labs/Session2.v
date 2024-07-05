@@ -1,5 +1,5 @@
 
-
+/****************LAB1******************/
 module N_Bit_ALU(A,B,ALU_OP,RES);
 
 parameter N = 4 ;
