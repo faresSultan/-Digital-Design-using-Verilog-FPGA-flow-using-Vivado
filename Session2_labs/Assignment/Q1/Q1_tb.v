@@ -6,7 +6,7 @@ reg [2:0] D_tb;
 wire out_tb,out_bar_tb;
 reg out_exp,out_bar_exp;
 
-Func func_tb (.A(A_tb),.B(B_tb),.C(C_tb),.Sel(S_tb),.out(out_tb),.Out_bar(out_bar_tb));
+Func func_tb (.A(A_tb),.B(B_tb),.C(C_tb),.Sel(S_tb),.Out(out_tb),.Out_bar(out_bar_tb));
 
 integer i;
 
