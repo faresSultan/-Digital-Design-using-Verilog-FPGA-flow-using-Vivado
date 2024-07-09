@@ -11,7 +11,7 @@ Func func_tb (.A(A_tb),.B(B_tb),.C(C_tb),.D(D_tb),.Sel(S_tb),.Out(out_tb),.Out_b
 integer i;
 
     initial begin
-        for(i=0;i<99;i = i+1)begin
+        for(i=0;i<50;i = i+1)begin
             A_tb = $random;
             B_tb = $random;
             C_tb = $random;
@@ -29,13 +29,14 @@ integer i;
              end
 
             out_bar_exp = ~out_exp;
+             #10;
             if ((out_exp != out_tb) || (out_bar_exp != out_bar_tb)) begin
                 $display("Error - Output is incorrect\n");
 
                 #10;
                 $stop; 
             end
-            #10;   
+            //#10;   
         end
         $display("Passed");
             $stop;

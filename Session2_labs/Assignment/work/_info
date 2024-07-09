@@ -23,6 +23,8 @@ R0
 R0
 R0
 R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -43,16 +45,15 @@ n@_opt
 Z5 OL;O;2021.1;73
 R1
 T_opt1
-!s110 1720445971
-V1kfl;JeI]_Zn3zFePd]G=3
+!s110 1720548345
+V`a42iTl;hmVjY0aJ1iWF00
 04 5 4 work Q1_tb fast 0
-=1-ccf9e498c556-668bec13-9d-5e80
+=1-ccf9e498c556-668d7bf8-a9-5794
 R2
 R3
 R4
 n@_opt1
 R5
-R1
 T_opt2
 !s110 1720529035
 V9b:RJQ]51oaV>O5_O8n6o3
@@ -63,6 +64,7 @@ R3
 R4
 n@_opt2
 R5
+R1
 vFunc
 Z6 !s110 1720445953
 !i10b 1
@@ -156,24 +158,24 @@ R16
 R4
 n@priority_encoder_4bit
 vQ1_tb
-R6
+!s110 1720548329
 !i10b 1
-!s100 Z=`jGBn93kX[<R003VCho3
-I<o1ZPLXAmol>?:Nl?kz0h3
+!s100 ?GK5Xm14<G_d=Y:A^afkW1
+IS3?B7aoSNgX_NJBW_=nOH3
 R7
-w1720445679
+w1720548321
 8D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v
 FD:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v
-!i122 35
-L0 2 46
+!i122 41
+L0 2 47
 R11
 R12
 r1
 !s85 0
 31
-R13
+!s108 1720548329.000000
 !s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v|
 !i113 0
 R16
 R4
