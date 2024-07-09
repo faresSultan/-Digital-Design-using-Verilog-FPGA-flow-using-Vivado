@@ -1,6 +1,20 @@
-{D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v}
+{D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1_tb.v} {1 {vlog -work work -vopt -stats=none {D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
--- Compiling module N_way_2_1_mux
+-- Compiling module Q1_tb
+
+Top level modules:
+	Q1_tb
+
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Priority_encoder_4bit
+
+Top level modules:
+	Priority_encoder_4bit
+
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module N_bus_2_1_mux
 -- Compiling module Func
 
 Top level modules:

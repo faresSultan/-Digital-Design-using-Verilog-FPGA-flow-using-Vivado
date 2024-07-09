@@ -19,23 +19,23 @@ integer i;
             D_tb[1] = $random;
             D_tb[2] = $random;
             S_tb = $random;
-    
             if (S_tb == 0) begin
                 out_exp = (D_tb[0] & D_tb[1] ) | (D_tb[2]);
              end
              else if (S_tb == 1) begin
                 
                 out_exp = ~(A_tb ^ B_tb ^ C_tb);
+
              end
-
-            out_bar_exp = ~out_exp;
-            if ((out_exp != out_tb) || (out_bar_exp != out_bar_tb)) begin
-                $display("Error - Output is incorrect\n");
-
-                #10;
-                $stop; 
-            end
-            #10;   
+                out_bar_exp = ~out_exp;
+                if ((out_exp != out_tb) || (out_bar_exp != out_bar_tb)) begin
+                     $display("Error - Output is incorrect");
+                    $stop; 
+                end
+              #10;
+                
+           
+            
         end
         $display("Passed");
             $stop;
