@@ -25,6 +25,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -54,17 +55,17 @@ R3
 R4
 n@_opt1
 R5
+R1
 T_opt2
-!s110 1720529035
-V9b:RJQ]51oaV>O5_O8n6o3
+!s110 1720549009
+Vi69e@ASXe>7WdO7bNebZ_2
 04 5 4 work Q2_tb fast 0
-=1-ccf9e498c556-668d3089-264-6afc
+=1-ccf9e498c556-668d7e8f-25c-6a18
 R2
 R3
 R4
 n@_opt2
 R5
-R1
 vFunc
 Z6 !s110 1720445953
 !i10b 1
@@ -181,22 +182,22 @@ R16
 R4
 n@q1_tb
 vQ2_tb
-!s110 1720529022
+!s110 1720548994
 !i10b 1
-!s100 gQ[F4VCCk0D:4HjM8hiJz2
-I;[1]@b5?Xhc13miS<m;PY2
+!s100 [n;NT^OZVcj7KOnOhHJLo3
+I7OOdgVkY@IdHnKDUXRXc11
 R7
-w1720529014
+w1720548836
 8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v
 FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v
-!i122 39
-L0 1 45
+!i122 42
+L0 1 43
 R11
 R12
 r1
 !s85 0
 31
-!s108 1720529022.000000
+!s108 1720548994.000000
 !s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v|
 !i113 0

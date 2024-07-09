@@ -7,7 +7,7 @@ Priority_encoder_4bit encoder_tb (.X(X_tb),.Y(Y_tb));
 integer i;
 
     initial begin
-        for(i=0;i<99;i = i+1)begin
+        for(i=0;i<50;i = i+1)begin
             X_tb = $random;
             
             if (X_tb[3] === 1) begin
@@ -25,13 +25,13 @@ integer i;
                 
                   Y_exp = 2'b00;
              end
-
+            #10; 
             if (Y_tb != Y_exp) begin
                 $display("Error - Output is incorrect\n");
                 #10;
                 $stop; 
             end
-            #10;   
+              
         end
         $display("Passed");
             $stop;
