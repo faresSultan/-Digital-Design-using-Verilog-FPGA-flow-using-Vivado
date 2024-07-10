@@ -1,0 +1,6 @@
+
+module moduleName (
+    ports
+);
+    
+endmodule
