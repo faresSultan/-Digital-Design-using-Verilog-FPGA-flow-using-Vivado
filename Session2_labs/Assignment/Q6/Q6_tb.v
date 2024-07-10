@@ -6,19 +6,7 @@ reg en;
 wire a, b, c, d, e, f, g;
 wire [6:0] segment_out;
 
-ALU_with_7segment_decoder uut (
-    .A(A),
-    .B(B),
-    .opcode(opcode),
-    .en(en),
-    .a(a),
-    .b(b),
-    .c(c),
-    .d(d),
-    .e(e),
-    .f(f),
-    .g(g)
-);
+ALU_with_7segment_decoder uut (.A(A),.B(B), .opcode(opcode),.en(en),.a(a),.b(b),.c(c),.d(d),.e(e), .f(f), .g(g));
 
 
 assign segment_out = {a, b, c, d, e, f, g};

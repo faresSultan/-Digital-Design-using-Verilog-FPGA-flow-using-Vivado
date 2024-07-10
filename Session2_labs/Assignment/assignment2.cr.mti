@@ -12,6 +12,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	Decimal_to_BCD_Encoder_tb
 
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q6/Q6.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q6/Q6.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALU_with_7segment_decoder
+
+Top level modules:
+	ALU_with_7segment_decoder
+
 } {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module Priority_encoder_4bit
@@ -25,6 +32,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 
 Top level modules:
 	N_bit_adder
+
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q6/Q6_tb.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q6/Q6_tb.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Q6_tb
+
+Top level modules:
+	Q6_tb
 
 } {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
