@@ -1,4 +1,11 @@
-{D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v}
+{D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5_tb.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5_tb.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Q5_tb
+
+Top level modules:
+	Q5_tb
+
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module Decimal_to_BCD_Encoder_tb
 
