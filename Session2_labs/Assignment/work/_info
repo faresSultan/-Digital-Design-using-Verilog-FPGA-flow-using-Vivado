@@ -28,6 +28,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -46,17 +47,17 @@ Z3 o-quiet -auto_acc_if_foreign -work work +acc
 Z4 tCvgOpt 0
 n@_opt
 Z5 OL;O;2021.1;73
+R1
 T_opt1
-!s110 1720548345
-V`a42iTl;hmVjY0aJ1iWF00
-04 5 4 work Q1_tb fast 0
-=1-ccf9e498c556-668d7bf8-a9-5794
+!s110 1720629163
+V`^=E;kSYRoGhfR<fOM8LP2
+04 5 4 work Q4_tb fast 0
+=1-ccf9e498c556-668eb7a6-21-5b20
 R2
 R3
 R4
 n@_opt1
 R5
-R1
 T_opt2
 !s110 1720549009
 Vi69e@ASXe>7WdO7bNebZ_2
@@ -137,6 +138,29 @@ Z16 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-
 R9
 R4
 n@func
+vN_bit_adder
+Z17 !s110 1720629136
+!i10b 1
+!s100 DYhF[e34ONBJ@V[_RJ?VA1
+I]Dim;?NF;F]XdV;Y0EWG>2
+R6
+w1720628706
+8D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v
+FD:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v
+!i122 48
+Z18 L0 2 8
+R7
+R8
+r1
+!s85 0
+31
+Z19 !s108 1720629136.000000
+!s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v|
+!i113 0
+R9
+R4
+n@n_bit_adder
 vN_bus_2_1_mux
 R10
 !i10b 1
@@ -147,7 +171,7 @@ R11
 R12
 R13
 !i122 34
-Z17 L0 2 8
+R18
 R7
 R8
 r1
@@ -170,7 +194,7 @@ w1720381958
 R12
 R13
 !i122 23
-R17
+R18
 R7
 R8
 r1
@@ -252,3 +276,26 @@ r1
 R9
 R4
 n@q2_tb
+vQ4_tb
+R17
+!i10b 1
+!s100 0M<AOL<B5V2WRC`0GjDCc2
+I6aLciFjgSZTg2Y42hg^gT1
+R6
+w1720629104
+8D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v
+FD:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v
+!i122 49
+L0 1 30
+R7
+R8
+r1
+!s85 0
+31
+R19
+!s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v|
+!i113 0
+R9
+R4
+n@q4_tb
