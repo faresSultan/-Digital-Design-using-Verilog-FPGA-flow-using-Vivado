@@ -5,13 +5,14 @@ module Q5_tb ();
     reg [N-1:0] A_tb,B_tb;
     reg [1:0] op_tb;
     wire [N-1:0] res_tb;
+    wire [N-1:0] add_res;
     
     reg [N-1:0] res_exp;
 
-
+    
     ALU_N_bits #(.n(N)) ALU_DUT (.a(A_tb),.b(B_tb),.op(op_tb),.result(res_tb));
-integer i;
 
+    integer i;
     initial begin
 
         for(i=0;i<50;i = i+1)begin
@@ -20,12 +21,12 @@ integer i;
             op_tb = $random;
             
             case (op_tb)
-                'b00: res_exp = A_tb + B_tb;  
+                'b00: res_exp = A_tb + B_tb; 
                 'b10: res_exp = A_tb - B_tb;  
                 'b01: res_exp = A_tb | B_tb;  
                 'b11: res_exp = A_tb ^ B_tb;   
             endcase
-            #10;
+            #100;
             
             if (res_tb != res_exp) begin
                 $display("Error - Output is incorrect\n");

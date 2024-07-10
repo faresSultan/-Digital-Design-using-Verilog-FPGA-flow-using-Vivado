@@ -1,0 +1,350 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs
+T_opt
+!s110 1720639963
+VSX9`FVRcb;z8^bh2K3F583
+Z2 04 5 4 work Q4_tb fast 0
+=1-ccf9e498c556-668ee1d8-3c6-6530
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1720641179
+V2b5XE=z7j2;@iITU;4hUX2
+R2
+=1-ccf9e498c556-668ee69a-1d4-209c
+R3
+Z6 o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+T_opt2
+!s110 1720640876
+VHo=UBQih^dJOMcRh0QU2_2
+04 5 4 work Q5_tb fast 0
+=1-ccf9e498c556-668ee56a-133-6778
+R3
+R6
+R4
+n@_opt2
+R5
+R1
+vALU_N_bits
+!s110 1720640422
+!i10b 1
+!s100 QZf3@?g9d<jDIaVUXD2eN2
+IGZVeaG22D<XBL9;^VBKeB1
+Z7 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment
+w1720639572
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5.v
+!i122 55
+L0 2 23
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1720640422.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@a@l@u_@n_bits
+vDecimal_to_BCD_Encoder
+!s110 1720608446
+!i10b 1
+!s100 a0X?b5ZiDJ2:56^cRB]ff0
+IN@FXePZFjOZOPTYFJLgoS1
+R7
+w1720608439
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3.v
+!i122 44
+L0 4 25
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720608445.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3.v|
+!i113 0
+R10
+R4
+n@decimal_to_@b@c@d_@encoder
+vDecimal_to_BCD_Encoder_tb
+!s110 1720608882
+!i10b 1
+!s100 JE;bk_CmSOoZXf>92jfVd2
+IXW0WlW45EWcX0<SmUCQ>d1
+R7
+w1720608871
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v
+!i122 47
+L0 1 51
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720608882.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3_tb.v|
+!i113 0
+R10
+R4
+n@decimal_to_@b@c@d_@encoder_tb
+vFunc
+Z11 !s110 1720445953
+!i10b 1
+!s100 [1_k4[R]fcQiI494R3HG:2
+I<3YSLn0HofWbXD4eN7BN]0
+R7
+Z12 w1720445045
+Z13 8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v
+Z14 FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v
+!i122 34
+L0 11 15
+R8
+R9
+r1
+!s85 0
+31
+Z15 !s108 1720445953.000000
+Z16 !s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v|
+Z17 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v|
+!i113 0
+R10
+R4
+n@func
+vN_bit_adder
+!s110 1720629136
+!i10b 1
+!s100 DYhF[e34ONBJ@V[_RJ?VA1
+I]Dim;?NF;F]XdV;Y0EWG>2
+R7
+w1720628706
+8D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v
+FD:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v
+!i122 48
+Z18 L0 2 8
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720629136.000000
+!s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4.v|
+!i113 0
+R10
+R4
+n@n_bit_adder
+vN_bus_2_1_mux
+R11
+!i10b 1
+!s100 F^@R@aEB]F6mK_^I?BW811
+IQEmlU8R79VcP0g_Xj8hO;0
+R7
+R12
+R13
+R14
+!i122 34
+R18
+R8
+R9
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R10
+R4
+n@n_bus_2_1_mux
+vN_way_2_1_mux
+!s110 1720440471
+!i10b 1
+!s100 8K>K:<bQbZDKYQjE>@K6l0
+I3QWk9zoC;g@f@mW^A]8CB0
+R7
+w1720381958
+R13
+R14
+!i122 23
+R18
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720440471.000000
+R16
+R17
+!i113 0
+R10
+R4
+n@n_way_2_1_mux
+vPriority_encoder_4bit
+!s110 1720528852
+!i10b 1
+!s100 g1R7G1MCOWmRfM<f3jGk=1
+IjfQHmdXBZSS;P]iPk`23F0
+R7
+w1720528813
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v
+!i122 37
+L0 2 16
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720528852.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2.v|
+!i113 0
+R10
+R4
+n@priority_encoder_4bit
+vQ1_tb
+!s110 1720548329
+!i10b 1
+!s100 ?GK5Xm14<G_d=Y:A^afkW1
+IS3?B7aoSNgX_NJBW_=nOH3
+R7
+w1720548321
+8D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v
+FD:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v
+!i122 41
+L0 2 47
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720548329.000000
+!s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q1\Q1_tb.v|
+!i113 0
+R10
+R4
+n@q1_tb
+vQ2_tb
+!s110 1720548994
+!i10b 1
+!s100 [n;NT^OZVcj7KOnOhHJLo3
+I7OOdgVkY@IdHnKDUXRXc11
+R7
+w1720548836
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v
+!i122 42
+L0 1 43
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720548994.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q2/Q2_tb.v|
+!i113 0
+R10
+R4
+n@q2_tb
+vQ4_tb
+!s110 1720641159
+!i10b 1
+!s100 SRL8ILDE52H@nPKUG:74Z3
+IiVAbGeDbIjWliNib[9FgO2
+R7
+w1720641149
+8D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v
+FD:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v
+!i122 59
+L0 1 39
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720641159.000000
+!s107 D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Digital IC design\-Digital-Design-using-Verilog-FPGA-flow-using-Vivado\Session2_labs\Assignment\Q4\Q4_tb.v|
+!i113 0
+R10
+R4
+n@q4_tb
+vQ5_tb
+!s110 1720640858
+!i10b 1
+!s100 gQO3W>XFfU5ol_RCL3>G23
+IJO<<9?02]TT2ZPDNFVGDY2
+R7
+w1720640793
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5_tb.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q5/Q5_tb.v
+!i122 58
+L0 1 53
+R8
+R9
+r1
+!s85 0
+31
+!s108 1720640858.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-V

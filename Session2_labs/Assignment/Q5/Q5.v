@@ -6,7 +6,7 @@ input [1:0] op;
 wire adder_out;
 output reg [n-1:0] result;
 
-N_bit_adder#(.N(n)) H_adder (.A(a),.B(b),.C(adder_out));
+N_bit_adder #(.N(n)) H_adder (.A(a),.B(b),.C(adder_out));
 
     always @(*) begin  
         case (op)  
