@@ -12,6 +12,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	Q2_tb
 
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q3/Q3.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Decimal_to_BCD_Encoder
+
+Top level modules:
+	Decimal_to_BCD_Encoder
+
 } {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment/Q1/Q1.v}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module N_bus_2_1_mux

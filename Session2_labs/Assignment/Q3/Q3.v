@@ -4,7 +4,7 @@
 module Decimal_to_BCD_Encoder (D,Y);
 
 input [9:0] D;
-Output reg [3:0] Y;
+output reg [3:0] Y;
 
 always @(*) begin
 
