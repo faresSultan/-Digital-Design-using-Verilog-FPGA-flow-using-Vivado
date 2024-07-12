@@ -14,6 +14,14 @@ module Q5_tb ();
 
     integer i;
     initial begin
+        op_tb = 'b00;
+        A_tb = 'hA;
+        B_tb = 'h3;
+        #10;
+
+        A_tb = 'b1000;
+        B_tb = 'b0101;
+        #10;
 
         for(i=0;i<50;i = i+1)begin
             A_tb = $random;
@@ -26,7 +34,7 @@ module Q5_tb ();
                 'b01: res_exp = A_tb | B_tb;  
                 'b11: res_exp = A_tb ^ B_tb;   
             endcase
-            #100;
+            #10;
             
             if (res_tb != res_exp) begin
                 $display("Error - Output is incorrect\n");
