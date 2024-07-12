@@ -3,7 +3,7 @@ module ALU_N_bits #(parameter n = 4) ( a,b,op,result);
 
 input [n-1:0] a,b;
 input [1:0] op;
-wire adder_out;
+wire [n-1:0] adder_out;
 output reg [n-1:0] result;
 
 N_bit_adder #(.N(n)) H_adder (.A(a),.B(b),.C(adder_out));

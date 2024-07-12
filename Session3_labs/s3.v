@@ -6,10 +6,10 @@ module s3 (D,E,PRE,CLK,Q);
     always @(PRE, posedge CLK) begin
 
         if (PRE == 0) begin
-            Q = 1;
+            Q <= 1;
         end
-        else if (PRE == 1) begin
-            Q = D;
+        else if (E == 1) begin
+            Q <= D;
         end
         
     end
