@@ -3,12 +3,12 @@ module s3 (D,E,PRE,CLK,Q);
     input D,E,PRE,CLK;
     output reg Q;
 
-    always @(PRE, posedge CLK) begin
+    always @(negedge PRE, posedge CLK) begin
 
-        if (PRE == 0) begin
+        if (~PRE) begin
             Q <= 1;
         end
-        else if (E == 1) begin
+        else if (E) begin
             Q <= D;
         end
         
