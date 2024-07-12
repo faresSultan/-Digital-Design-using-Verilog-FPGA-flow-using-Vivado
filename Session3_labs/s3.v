@@ -22,10 +22,10 @@
 module shift_r (C,SI,LEFT_RIGHT,PO);
 
     input C,SI,LEFT_RIGHT;
-    output [7:0] PO;
+    output reg [7:0] PO;
 
     always @(posedge C) begin
-        
+
         if (LEFT_RIGHT) begin
             PO <= {SI,PO[7:1]};
         end
