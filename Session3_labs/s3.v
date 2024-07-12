@@ -11,6 +11,7 @@ module dff_E_PRE (D,E,PRE,CLK,Q);
         else if (E) begin
             Q <= D;
         end
+        // else Q=Q is meaningless
         
     end
     
