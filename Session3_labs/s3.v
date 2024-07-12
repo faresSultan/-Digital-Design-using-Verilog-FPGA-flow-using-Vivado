@@ -1,4 +1,4 @@
-module s3 (D,E,PRE,CLK,Q);
+module dff_E_PRE (D,E,PRE,CLK,Q);
 
     input D,E,PRE,CLK;
     output reg Q;
