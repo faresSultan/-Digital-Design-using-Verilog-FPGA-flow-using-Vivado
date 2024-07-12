@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 module Gray_Hot_encoder #( parameter USE_GRAY=1) (A,B);
+=======
+module Gray_Hot_encoder #( USE_GRAY=1) (A,B);
+>>>>>>> ad5cc7db42d59adca65d41cf9df44fa54f0326b7
 
     input [2:0]A;
     output reg [6:0]B;
