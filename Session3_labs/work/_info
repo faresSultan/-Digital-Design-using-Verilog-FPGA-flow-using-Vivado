@@ -1,0 +1,68 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Assignment
+T_opt
+!s110 1720774573
+VCDTi]Olz>33Q3@gWCn[ic1
+04 13 4 work dff_en_pre_tb fast 0
+=1-ccf9e498c556-6690efab-120-5d0c
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vdff_E_PRE
+Z2 !s110 1720774563
+!i10b 1
+!s100 FKB5I>6[?^6PXhdGVTSgo1
+I1h08TJzbO^1CO2_BZa7LI3
+Z3 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session3_labs
+w1720767018
+8s3.v
+Fs3.v
+!i122 4
+L0 1 18
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1720774563.000000
+Z7 !s107 dff_en_pre_tb.v|s3.v|
+Z8 !s90 -reportprogress|300|s3.v|dff_en_pre_tb.v|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+ndff_@e_@p@r@e
+vdff_en_pre_tb
+R2
+!i10b 1
+!s100 60`RPCaL>Mlzm6nOh=V]73
+I4:2TX1UERAZ964z:`AUgR3
+R3
+w1720774239
+8dff_en_pre_tb.v
+Fdff_en_pre_tb.v
+!i122 4
+L0 1 41
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
