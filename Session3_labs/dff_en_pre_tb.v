@@ -12,6 +12,7 @@ module dff_en_pre_tb();
         end
     end
         dff_E_PRE DUT (.D(d_tb),.E(e_tb),.PRE(pre_tb),.CLK(clk),.Q(q_tb));
+        
     initial begin
         pre_tb = 0;
         d_tb = 0;
