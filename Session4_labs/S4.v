@@ -10,10 +10,10 @@ module ALU_with_reg(A,B,opcode,clk,rst,out);
     output reg [7:0] out;
 
     ALU alu (.A(A_reg),.B(B_reg),.op(opcode_reg),.out(out_alu));
-    N_bit_reg #(N=4) A_r (.D(A),.clk(clk),.rst(rst),.out_r(A_reg));
-    N_bit_reg #(N=4) B_r (.D(B),.clk(clk),.rst(rst),.out_r(B_reg));
-    N_bit_reg #(N=2) op_r (.D(opcode),.clk(clk),.rst(rst),.out_r(opcode_reg));
-    N_bit_reg #(N=8) aluOut_r (.D(out_alu),.clk(clk),.rst(rst),.out_r(out));
+    N_bit_reg #(.N(4)) A_r (.D(A),.clk(clk),.rst(rst),.out_r(A_reg));
+    N_bit_reg #(.N(4)) B_r (.D(B),.clk(clk),.rst(rst),.out_r(B_reg));
+    N_bit_reg #(.N(2)) op_r (.D(opcode),.clk(clk),.rst(rst),.out_r(opcode_reg));
+    N_bit_reg #(.N(8)) aluOut_r (.D(out_alu),.clk(clk),.rst(rst),.out_r(out));
 
     // not yet tested
 
