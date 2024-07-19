@@ -4,10 +4,10 @@ module ALU_with_reg(A,B,opcode,clk,rst,out);
     input [1:0] opcode;
     input clk,rst;
 
-    reg [3:0]A_reg,B_reg;
-    reg [1:0]opcode_reg;
-    reg [7:0]out_alu;
-    output reg [7:0] out;
+    wire [3:0]A_reg,B_reg;
+    wire [1:0]opcode_reg;
+    wire [7:0]out_alu;
+    output [7:0] out;
 
     ALU alu (.A(A_reg),.B(B_reg),.op(opcode_reg),.out(out_alu));
     N_bit_reg #(.N(4)) A_r (.D(A),.clk(clk),.rst(rst),.out_r(A_reg));

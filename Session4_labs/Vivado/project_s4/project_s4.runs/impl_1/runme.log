@@ -1,0 +1,16 @@
+
+*** Running vivado
+    with args -log ALU_with_reg.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ALU_with_reg.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source ALU_with_reg.tcl -notrace
+Command: open_checkpoint {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Vivado/project_s4/project_s4.runs/impl_1/ALU_with_reg.dcp}
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 228.285 ; gain = 0.000
