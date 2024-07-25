@@ -17,20 +17,20 @@ reg [5:0] out_r;
 output [15:0] leds;
 reg [15:0] leds_r;
 
-N_bit_reg #(.N = 3) A_reg(.D(A),.clk(clk),.rst(rst),.out_r(A_r)); 
-N_bit_reg #(.N = 3) B_reg(.D(B),.clk(clk),.rst(rst),.out_r(B_r)); 
-N_bit_reg #(.N = 3) opcode_reg(.D(opcode),.clk(clk),.rst(rst),.out_r(opcode_r));
+N_bit_reg #(.N (3)) A_reg(.D(A),.clk(clk),.rst(rst),.out_r(A_r)); 
+N_bit_reg #(.N(3)) B_reg(.D(B),.clk(clk),.rst(rst),.out_r(B_r)); 
+N_bit_reg #(.N(3)) opcode_reg(.D(opcode),.clk(clk),.rst(rst),.out_r(opcode_r));
 
-N_bit_reg #(.N = 1) cin_reg(.D(cin),.clk(clk),.rst(rst),.out_r(cin_r)); 
-N_bit_reg #(.N = 1) serial_in_reg(.D(serial_in),.clk(clk),.rst(rst),.out_r(serial_in_r)); 
-N_bit_reg #(.N = 1) direction_reg(.D(direction),.clk(clk),.rst(rst),.out_r(direction_r)); 
-N_bit_reg #(.N = 1) red_op_A_reg(.D(red_op_A),.clk(clk),.rst(rst),.out_r(red_op_A_r));  
-N_bit_reg #(.N = 1) red_op_B_reg(.D(red_op_B),.clk(clk),.rst(rst),.out_r(red_op_B_r));  
-N_bit_reg #(.N = 1) bypass_A_reg(.D(bypass_A),.clk(clk),.rst(rst),.out_r(bypass_A_r));    
-N_bit_reg #(.N = 1) bypass_B_reg(.D(bypass_B),.clk(clk),.rst(rst),.out_r(bypass_B_r));
+N_bit_reg #(.N(1)) cin_reg(.D(cin),.clk(clk),.rst(rst),.out_r(cin_r)); 
+N_bit_reg #(.N(1)) serial_in_reg(.D(serial_in),.clk(clk),.rst(rst),.out_r(serial_in_r)); 
+N_bit_reg #(.N(1)) direction_reg(.D(direction),.clk(clk),.rst(rst),.out_r(direction_r)); 
+N_bit_reg #(.N(1)) red_op_A_reg(.D(red_op_A),.clk(clk),.rst(rst),.out_r(red_op_A_r));  
+N_bit_reg #(.N(1)) red_op_B_reg(.D(red_op_B),.clk(clk),.rst(rst),.out_r(red_op_B_r));  
+N_bit_reg #(.N(1)) bypass_A_reg(.D(bypass_A),.clk(clk),.rst(rst),.out_r(bypass_A_r));    
+N_bit_reg #(.N(1)) bypass_B_reg(.D(bypass_B),.clk(clk),.rst(rst),.out_r(bypass_B_r));
 
-N_bit_reg #(.N = 16) leds_reg(.D(leds_r),.clk(clk),.rst(rst),.out_r(leds));    
-N_bit_reg #(.N = 6) out_reg(.D(out_r),.clk(clk),.rst(rst),.out_r(out));    
+N_bit_reg #(.N(16)) leds_reg(.D(leds_r),.clk(clk),.rst(rst),.out_r(leds));    
+N_bit_reg #(.N(6)) out_reg(.D(out_r),.clk(clk),.rst(rst),.out_r(out));    
 
 
 
@@ -74,13 +74,13 @@ N_bit_reg #(.N = 6) out_reg(.D(out_r),.clk(clk),.rst(rst),.out_r(out));
             end 
 
             else if (opcode_r == 3'b100) begin    // SHFIT
-                 if (direction_r == 1) out_r = {out_r[6:0],serial_in_r};
-                 else out_r = {serial_in_r,out_r[7:1]};
+                 if (direction_r == 1) out_r = {out_r[4:0],serial_in_r};
+                 else out_r = {serial_in_r,out_r[5:1]};
             end
 
             else if (opcode_r == 3'b101) begin    // ROTATE
-                 if (direction_r == 1) out_r = {out_r[6:0],out_r[7]};
-                 else out_r = {out_r[0],out_r[7:1]};
+                 if (direction_r == 1) out_r = {out_r[4:0],out_r[5]};
+                 else out_r = {out_r[0],out_r[5:1]};
             end
 
             else if ((opcode_r == 3'b110) || (opcode_r == 3'b111)) begin    // invalid cases
@@ -96,7 +96,7 @@ N_bit_reg #(.N = 6) out_reg(.D(out_r),.clk(clk),.rst(rst),.out_r(out));
 
 endmodule
 
-module N_bit_reg #(N=1) (D,clk,rst,out_r);
+module N_bit_reg #(parameter N=1) (D,clk,rst,out_r);
 
     input [N-1:0] D;
     input rst,clk;

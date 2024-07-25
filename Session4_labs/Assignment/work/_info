@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ASUFOE/Digital design/Eng. kareem design diploma/Session3/Assignment
+vALSU
+Z0 !s110 1721919355
+!i10b 1
+!s100 7Qf4;HG2^J0`l>7Mi3bFO3
+IMgKz?R@[KQSI^QFQg`j]d2
+Z1 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment
+Z2 w1721919339
+Z3 8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment/Q1.v
+Z4 FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment/Q1.v
+!i122 2
+L0 1 97
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z7 !s108 1721919355.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment/Q1.v|
+Z8 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment/Q1.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+n@a@l@s@u
+vN_bit_reg
+R0
+!i10b 1
+!s100 F<gB2QTUo9@IFcae0]hk11
+I6IVm>]_M3k;o5TYh]M4IG1
+R1
+R2
+R3
+R4
+!i122 2
+L0 99 12
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment/Q1.v|
+R8
+!i113 0
+R9
+R10
+n@n_bit_reg
