@@ -36,57 +36,57 @@ N_bit_reg #(.N(6)) out_reg(.D(out_r),.clk(clk),.rst(rst),.out_r(out));
 
     always @(posedge clk or posedge rst) begin
         if(rst == 1) begin
-            out_r = 0;
-            leds_r = 0;
+            out_r <= 0;
+            leds_r <= 0;
         end
 
         else begin
             if ((bypass_A_r || bypass_B_r) == 1) begin // Bypass condition
-            if ((INPUT_PRIORITY == "A") && (bypass_A_r == 1)) out_r = A_r;
-            else if ((INPUT_PRIORITY == "A") && (bypass_A_r == 0) &&(bypass_B_r == 1)) out_r = B_r;
-            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 1)) out_r = B_r;
-            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 0) &&(bypass_A_r == 1)) out_r = A_r;     
+            if ((INPUT_PRIORITY == "A") && (bypass_A_r == 1)) out_r <= A_r;
+            else if ((INPUT_PRIORITY == "A") && (bypass_A_r == 0) &&(bypass_B_r == 1)) out_r <= B_r;
+            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 1)) out_r <= B_r;
+            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 0) &&(bypass_A_r == 1)) out_r <= A_r;     
             end 
 
             else if (opcode_r == 3'b000) begin    // AND
-                if ((red_op_A_r && red_op_B_r) == 0) out_r = A_r & B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out_r = &A_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out_r = &B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out_r = &B_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out_r = &A_r; 
+                if ((red_op_A_r && red_op_B_r) == 0) out_r <= A_r & B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out_r <= &A_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out_r <= &B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out_r <= &B_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out_r <= &A_r; 
             end
 
             else if (opcode_r == 3'b001) begin  // XOR
                 if ((red_op_A_r && red_op_B_r) == 0) out_r = A_r ^ B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out_r = ^A_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out_r = ^B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out_r = ^B_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out_r = ^A_r; 
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out_r <= ^A_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out_r <= ^B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out_r <= ^B_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out_r <= ^A_r; 
             end
 
             else if (opcode_r == 3'b010) begin    // ADD
-                 if (FULL_ADDER == "ON") out_r = A_r + B_r + cin_r;
-                 else if (FULL_ADDER == "OFF") out_r = A_r + B_r;
+                 if (FULL_ADDER == "ON") out_r <= A_r + B_r + cin_r;
+                 else if (FULL_ADDER == "OFF") out_r <= A_r + B_r;
             end 
 
             else if (opcode_r == 3'b011) begin    // MULTIPLY
-                 out_r = A_r * B_r;
+                 out_r <= A_r * B_r;
             end 
 
             else if (opcode_r == 3'b100) begin    // SHFIT
-                 if (direction_r == 1) out_r = {out_r[4:0],serial_in_r};
-                 else out_r = {serial_in_r,out_r[5:1]};
+                 if (direction_r == 1) out_r <= {out_r[4:0],serial_in_r};
+                 else out_r <= {serial_in_r,out_r[5:1]};
             end
 
             else if (opcode_r == 3'b101) begin    // ROTATE
-                 if (direction_r == 1) out_r = {out_r[4:0],out_r[5]};
-                 else out_r = {out_r[0],out_r[5:1]};
+                 if (direction_r == 1) out_r <= {out_r[4:0],out_r[5]};
+                 else out_r <= {out_r[0],out_r[5:1]};
             end
 
             else if ((opcode_r == 3'b110) || (opcode_r == 3'b111)) begin    // invalid cases
                  if (leds_r == 16'hffff) begin
-                    leds_r = 16'h0000;
-                 end else leds_r = 16'hffff;
+                    leds_r <= 16'h0000;
+                 end else leds_r <= 16'hffff;
             end
 
 
@@ -104,7 +104,7 @@ module N_bit_reg #(parameter N=1) (D,clk,rst,out_r);
 
     always @(posedge clk or posedge rst) begin
         if (rst == 1) out_r <= 0;
-        else if(clk == 1) out_r <= D;
+        else out_r <= D;
     end
     
 endmodule
