@@ -9,6 +9,18 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -16,83 +28,140 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/ASUFOE/Digital design/Eng. kareem design diploma/Session3/Assignment
+Z1 dD:/ASUFOE/Digital design/Eng. kareem design diploma/Session3/Assignment
 T_opt
-!s110 1721924997
-VAeSCcbWz[KZ5[=@KmMDT`0
+!s110 1721979947
+VE`iTRfg3Tgz[F<7d3H>^X3
 04 5 4 work Q1_tb fast 0
-=1-ccf9e498c556-66a27d83-6d-c0
-!s124 OEM100
-o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+=1-ccf9e498c556-66a35429-60-47d0
+Z2 !s124 OEM100
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
 n@_opt
-OL;O;2021.1;73
-vALSU
-Z2 !s110 1721924987
-!i10b 1
-!s100 ScNdUoab3mUQ>H`6_M>Me1
-IDbVz0iAKc07IJQ8K7W^@S3
-Z3 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment
-Z4 w1721924364
-Z5 8Q1.v
-Z6 FQ1.v
-!i122 13
-L0 1 97
-Z7 VDg1SIo80bB@j0V0VzS_@n1
-Z8 OL;L;2021.1;73
-r1
-!s85 0
-31
-Z9 !s108 1721924987.000000
-Z10 !s107 Q1_tb.v|Q1.v|
-Z11 !s90 -reportprogress|300|Q1.v|Q1_tb.v|
-!i113 0
-Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 OL;O;2021.1;73
 R1
-n@a@l@s@u
-vN_bit_reg
+T_opt1
+!s110 1722111971
+V8PCR9zJ[c67T@aU5mbL9U1
+04 5 4 work Q2_tb fast 0
+=1-ccf9e498c556-66a557e3-7b-5114
 R2
-!i10b 1
-!s100 cE4VLEcGOgd[N?naj_0k12
-IXBgPabg@;V:JEb[@95HA[1
 R3
 R4
+n@_opt1
 R5
-R6
-!i122 13
-L0 99 12
-R7
-R8
+vALSU
+Z6 !s110 1722108997
+!i10b 1
+!s100 Ez45J:=9[Xo[jnWUYN@d61
+IE=`MKdaQU;jSzdBQ4Z[3b3
+Z7 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session4_labs/Assignment
+Z8 w1721978843
+Z9 8Q1.v
+Z10 FQ1.v
+!i122 25
+L0 1 96
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2021.1;73
 r1
 !s85 0
 31
+Z13 !s108 1722108997.000000
+Z14 !s107 Q1_tb.v|Q1.v|
+Z15 !s90 -reportprogress|300|Q1.v|Q1_tb.v|
+!i113 0
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@a@l@s@u
+vDSP
+Z17 !s110 1722111967
+!i10b 1
+!s100 A?hH^iE27Kgk6cJZa;0DV0
+Ii6MW7<`>QM]7CAN=n075o2
+R7
+w1722111835
+8Q2.v
+FQ2.v
+!i122 30
+L0 1 37
+R11
+R12
+r1
+!s85 0
+31
+Z18 !s108 1722111967.000000
+Z19 !s107 Q1_tb.v|Q2.v|
+Z20 !s90 -reportprogress|300|Q2.v|Q1_tb.v|
+!i113 0
+R16
+R4
+n@d@s@p
+vN_bit_reg
+R6
+!i10b 1
+!s100 HZZTHa7cW8n5O_hHH2^cz0
+I[g8ZI3d?TLGi43d:o09310
+R7
+R8
 R9
 R10
+!i122 25
+L0 98 12
 R11
-!i113 0
 R12
-R1
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R4
 n@n_bit_reg
 vQ1_tb
-R2
+R6
 !i10b 1
-!s100 S<;cR_oT;JFg1W@h`Khef2
-Ihn<mD<>n3;nd4kFdgdFUg3
-R3
-w1721924982
-8Q1_tb.v
-FQ1_tb.v
-!i122 13
-L0 197 117
+!s100 jF:XFmD3K=_]iZLg=g]4C2
+Iee?acK`J=03M52EIBiDhj1
 R7
-R8
+w1721979931
+Z21 8Q1_tb.v
+Z22 FQ1_tb.v
+!i122 25
+L0 2 100
+R11
+R12
 r1
 !s85 0
 31
-R9
-R10
-R11
+R13
+R14
+R15
 !i113 0
-R12
-R1
+R16
+R4
 n@q1_tb
+vQ2_tb
+R17
+!i10b 1
+!s100 VjaQGlK@0C[617aWXIYka2
+IE`b6VKZhIWd@M7CXbZMgj3
+R7
+w1722111957
+R21
+R22
+!i122 30
+L0 103 37
+R11
+R12
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R16
+R4
+n@q2_tb

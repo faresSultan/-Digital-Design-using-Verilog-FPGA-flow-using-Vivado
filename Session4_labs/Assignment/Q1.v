@@ -11,8 +11,7 @@ input cin,serial_in,direction,red_op_A,red_op_B,bypass_A,bypass_B;
 wire cin_r,serial_in_r,direction_r,red_op_A_r,red_op_B_r,bypass_A_r,bypass_B_r;
 
 input clk,rst;
-output [5:0] out;
-reg [5:0] out_r;
+output reg [5:0] out;
 
 output [15:0] leds;
 reg [15:0] leds_r;
@@ -30,57 +29,57 @@ N_bit_reg #(.N(1)) bypass_A_reg(.D(bypass_A),.clk(clk),.rst(rst),.out_r(bypass_A
 N_bit_reg #(.N(1)) bypass_B_reg(.D(bypass_B),.clk(clk),.rst(rst),.out_r(bypass_B_r));
 
 N_bit_reg #(.N(16)) leds_reg(.D(leds_r),.clk(clk),.rst(rst),.out_r(leds));    
-N_bit_reg #(.N(6)) out_reg(.D(out_r),.clk(clk),.rst(rst),.out_r(out));    
+
 
 
 
     always @(posedge clk or posedge rst) begin
         if(rst == 1) begin
-            out_r <= 0;
+            out <= 0;
             leds_r <= 0;
         end
 
         else begin
             if ((bypass_A_r || bypass_B_r) == 1) begin // Bypass condition
-            if ((INPUT_PRIORITY == "A") && (bypass_A_r == 1)) out_r <= A_r;
-            else if ((INPUT_PRIORITY == "A") && (bypass_A_r == 0) &&(bypass_B_r == 1)) out_r <= B_r;
-            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 1)) out_r <= B_r;
-            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 0) &&(bypass_A_r == 1)) out_r <= A_r;     
+            if ((INPUT_PRIORITY == "A") && (bypass_A_r == 1)) out <= A_r;
+            else if ((INPUT_PRIORITY == "A") && (bypass_A_r == 0) &&(bypass_B_r == 1)) out <= B_r;
+            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 1)) out <= B_r;
+            else if ((INPUT_PRIORITY == "B") && (bypass_B_r == 0) &&(bypass_A_r == 1)) out <= A_r;     
             end 
 
             else if (opcode_r == 3'b000) begin    // AND
-                if ((red_op_A_r && red_op_B_r) == 0) out_r <= A_r & B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out_r <= &A_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out_r <= &B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out_r <= &B_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out_r <= &A_r; 
+                if ((red_op_A_r && red_op_B_r) == 0) out <= A_r & B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out <= &A_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out <= &B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out <= &B_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out <= &A_r; 
             end
 
             else if (opcode_r == 3'b001) begin  // XOR
-                if ((red_op_A_r && red_op_B_r) == 0) out_r = A_r ^ B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out_r <= ^A_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out_r <= ^B_r;
-                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out_r <= ^B_r; 
-                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out_r <= ^A_r; 
+                if ((red_op_A_r && red_op_B_r) == 0) out = A_r ^ B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 1)) out <= ^A_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 1)) out <= ^B_r;
+                else if ((INPUT_PRIORITY == "A") && (red_op_A_r == 0) &&(red_op_B_r == 1)) out <= ^B_r; 
+                else if ((INPUT_PRIORITY == "B") && (red_op_B_r == 0) &&(red_op_A_r == 1)) out <= ^A_r; 
             end
 
             else if (opcode_r == 3'b010) begin    // ADD
-                 if (FULL_ADDER == "ON") out_r <= A_r + B_r + cin_r;
-                 else if (FULL_ADDER == "OFF") out_r <= A_r + B_r;
+                 if (FULL_ADDER == "ON") out <= A_r + B_r + cin_r;
+                 else if (FULL_ADDER == "OFF") out <= A_r + B_r;
             end 
 
             else if (opcode_r == 3'b011) begin    // MULTIPLY
-                 out_r <= A_r * B_r;
+                 out <= A_r * B_r;
             end 
 
             else if (opcode_r == 3'b100) begin    // SHFIT
-                 if (direction_r == 1) out_r <= {out_r[4:0],serial_in_r};
-                 else out_r <= {serial_in_r,out_r[5:1]};
+                 if (direction_r == 1) out <= {out[4:0],serial_in_r};
+                 else out <= {serial_in_r,out[5:1]};
             end
 
             else if (opcode_r == 3'b101) begin    // ROTATE
-                 if (direction_r == 1) out_r <= {out_r[4:0],out_r[5]};
-                 else out_r <= {out_r[0],out_r[5:1]};
+                 if (direction_r == 1) out <= {out[4:0],out[5]};
+                 else out <= {out[0],out[5:1]};
             end
 
             else if ((opcode_r == 3'b110) || (opcode_r == 3'b111)) begin    // invalid cases

@@ -1,6 +1,6 @@
 vlib work
-vlog Q1.v Q1_tb.v
-vsim -voptargs=+acc work.Q1_tb
+vlog Q2.v Q1_tb.v
+vsim -voptargs=+acc work.Q2_tb
 add wave *
 run -all
 #quit -sim

@@ -8,25 +8,27 @@ module DSP #(parameter OPERATION = "ADD") (
     
     reg [47:0] multiplier_out;
     reg [18:0] adder1;
+    reg [17:0] A_reg1,A_reg2,B_reg,D_reg;
+    reg [47:0] C_reg;
     
-    always @(posedge clk) begin
-        if(OPERATION == "ADD") Adder1 <= D+B;
-        else if(OPERATION == "SUBTRACT") Adder1 <= D-B;
-
-        multiplier_out <= A * Adder1;
-    end
-    
-
     
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             P <= 48'b0;  // Reset output
         end else begin
+            A_reg1 <= A;
+            A_reg2 <= A_reg1;
+            B_reg <= B;
+            C_reg <= C;
+            D_reg <= D;
             if (OPERATION == "ADD") begin
-                
+                adder1 <= D_reg + C_reg;
+                multiplier_out <= A_reg2 * adder1; 
                 P <= multiplier_out + C;
+
             end else if (OPERATION == "SUBTRACT") begin
-                
+                adder1 <= D_reg - C_reg;
+                multiplier_out <= A_reg2 * adder1;
                 P <= (multiplier_out - C);
             end
         end
