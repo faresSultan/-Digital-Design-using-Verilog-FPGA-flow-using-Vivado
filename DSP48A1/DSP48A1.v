@@ -36,6 +36,8 @@ module DSP48A1 #(
 
 endmodule
 
+
+
 module VAL_REG_MUX #(parameter N = 1) (val,sel,clk,mux_out);
 
     input [N-1:0] val;
