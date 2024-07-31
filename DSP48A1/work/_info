@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,26 @@ z2
 !i10f 100
 cModel Technology
 dC:/questasim64_2021.1/examples
+vDSP48A1
+!s110 1722459756
+!i10b 1
+!s100 mLoRa33L6159`[7^cb8fi3
+IDAUOVgWI::fNGoM@1n:;a0
+dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/DSP48A1
+w1722459752
+8D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/DSP48A1/DSP48A1.v
+FD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/DSP48A1/DSP48A1.v
+!i122 0
+L0 1 39
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1722459756.000000
+!s107 D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/DSP48A1/DSP48A1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/DSP48A1/DSP48A1.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+n@d@s@p48@a1

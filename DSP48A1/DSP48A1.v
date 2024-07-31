@@ -1,12 +1,12 @@
 module DSP48A1 #(
     parameter A0REG = 0,parameter A1REG = 1,
     parameter B0REG = 0,parameter B1REG = 1,
-    parameter CREG = 1, parameter DREG = 1, parameter MREG = 1
+    parameter CREG = 1, parameter DREG = 1, parameter MREG = 1,
     parameter PREG = 1, parameter CARRYINREG = 1, parameter CARRYOUTREG = 1, parameter OPMODEREG = 1,
     parameter CARRYINSEL = "OPMODE5", parameter B_INPUT = "DIRECT", parameter RSTTYPE = "SYNC"   
 )
 (
-    A,B,C,D
+    A,B,C,D,
     clk,CARRYIN,
     OPMODE,BCIN,
     RSTA,RSTB,RSTC,RSTD,
@@ -26,7 +26,7 @@ module DSP48A1 #(
     input [7:0] OPMODE;
     input clk,CARRYIN,BCIN;
     input RSTA,RSTB,RSTC,RSTD,RSTP,RSTM,RSTCARRYIN,RSTOPMODE;
-    input CETA,CEB,CEC,CED,CEP,CEM,CECARRYIN,CEOPMODE;
+    input CEA,CEB,CEC,CED,CEP,CEM,CECARRYIN,CEOPMODE;
 
 //--------outputs------------
     output [17:0] BCOUT;
@@ -34,6 +34,6 @@ module DSP48A1 #(
     output [35:0] M;
     output CARRYOUT, CARRYOUTF;
 
-    
+
     
 endmodule
