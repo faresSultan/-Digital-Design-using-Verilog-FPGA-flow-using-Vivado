@@ -34,6 +34,19 @@ module DSP48A1 #(
     output [35:0] M;
     output CARRYOUT, CARRYOUTF;
 
+endmodule
 
+module VAL_REG_MUX #(parameter N = 1) (val,sel,clk,mux_out);
+
+    input [N-1:0] val;
+    input clk,sel;
+    output [N-1:0] mux_out;
+    wire val_r;
+
+    always @(posedge clk) begin
+        val_r = val;
+    end    
+     
+     assign (sel == 1)? (mux_out = val_r):(mux_out = val);
     
 endmodule
