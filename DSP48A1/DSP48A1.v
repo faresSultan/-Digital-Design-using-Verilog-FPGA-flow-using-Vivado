@@ -42,7 +42,7 @@ module DSP48A1 #(
 // pre-adder/subtractor stage
     wire D_r,B0_in,B0_r;
     reg preStage_out;
-    assign B0_in = (B_INPUT == "DIRECT")? B:((B_INPUT == "CASCADE")? BCIN : 0)  
+    assign B0_in = (B_INPUT == "DIRECT")? B:((B_INPUT == "CASCADE")? BCIN : 0); 
 
     VAL_REG_MUX#(.N(18)) D_REG (.val(D),.sel(DREG),.rst(RSTD),.CE(CED),.clk(clk),.mux_out(D_r));
     VAL_REG_MUX#(.N(18)) B_REG (.val(B0_in),.sel(BREG),.rst(RSTB),.CE(CEB),.clk(clk),.mux_out(B0_r));
@@ -60,9 +60,9 @@ endmodule
 module VAL_REG_MUX #(parameter N = 1) (val,sel,rst,CE,clk,mux_out);
 
     input [N-1:0] val;
-    input clk,rst,sel.CE;
+    input clk,rst,sel,CE;
     output [N-1:0] mux_out;
-    wire val_r;
+    reg val_r;
 
     always @(posedge clk) begin
         if(rst) val_r = 0;
