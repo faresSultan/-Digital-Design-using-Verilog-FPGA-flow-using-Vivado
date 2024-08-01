@@ -36,39 +36,59 @@ module DSP48A1 #(
 
 
 // opmode reg init
-    wire OPMODE_r;
-    VAL_REG_MUX#(.N(8)) OPMODE_REG (.val(OPMODE),.sel(OPMODEREG),.rst(RSTOPMODE),.CE(CEOPMODE),.clk(clk),.mux_out(OPMODE_r));
+    wire [7:0] OPMODE_r;
+    VAL_REG_MUX#(.N(8),.REG_EN(OPMODEREG)) OPMODE_REG (.val(OPMODE),.rst(RSTOPMODE),.CE(CEOPMODE),.clk(clk),.mux_out(OPMODE_r));
 
 // pre-adder/subtractor stage
-    wire D_r,B0_in,B0_r;
-    reg preStage_out;
-    assign B0_in = (B_INPUT == "DIRECT")? B:((B_INPUT == "CASCADE")? BCIN : 0); 
+    wire [17:0] D_r,B0_in,B0_r;
+    wire [17:0] preStage_out;
+    assign B0_in = (B_INPUT === "DIRECT")? B:((B_INPUT === "CASCADE")? BCIN : 0); 
+    VAL_REG_MUX#(.N(18),.REG_EN(DREG)) D_REG (.val(D),.rst(RSTD),.CE(CED),.clk(clk),.mux_out(D_r));
+    VAL_REG_MUX#(.N(18),.REG_EN(B0REG)) B_REG (.val(B0_in),.rst(RSTB),.CE(CEB),.clk(clk),.mux_out(B0_r));
 
-    VAL_REG_MUX#(.N(18)) D_REG (.val(D),.sel(DREG),.rst(RSTD),.CE(CED),.clk(clk),.mux_out(D_r));
-    VAL_REG_MUX#(.N(18)) B_REG (.val(B0_in),.sel(BREG),.rst(RSTB),.CE(CEB),.clk(clk),.mux_out(B0_r));
-
-    always @(B0_r,D_r,OPMODE[6]) begin
-        if (OPMODE[6] == 0) preStage_out = D_r + B0_r;
-        else if (OPMODE[6] == 1) preStage_out = D_r - B0_r;
-    end
+    PreAdderSubtractor preStage (.D(D_r),.B(B0_r),.OPMODE(OPMODE_r[6]),.preStage_out(preStage_out));
 
 
 endmodule
 
 
 
-module VAL_REG_MUX #(parameter N = 1) (val,sel,rst,CE,clk,mux_out);
+module VAL_REG_MUX #(parameter N = 1,parameter REG_EN = 1) (val,rst,CE,clk,mux_out);
 
     input [N-1:0] val;
-    input clk,rst,sel,CE;
-    output [N-1:0] mux_out;
+    input clk,rst,CE;
+    output reg [N-1:0] mux_out;
     reg val_r;
 
-    always @(posedge clk) begin
-        if(rst) val_r = 0;
-        else if (CE) val_r = val;
-    end    
-     
-     assign mux_out = (sel == 1)? val_r:val;
+    generate
+        if (REG_EN == 1) begin
+             always @(posedge clk) begin
+                 if (rst) mux_out <= 0;
+                 else if(CE) mux_out <= val;
+                 end
+        end 
+        else if (REG_EN == 0) begin
+             
+             always@(*) begin
+              mux_out = val;  
+             end
+              
+        end    
+    endgenerate
+    
+      
+    
+endmodule
+
+
+module PreAdderSubtractor (D,B,OPMODE,preStage_out);
+    input [17:0] D,B;
+    input OPMODE;
+    output reg [17:0] preStage_out;
+
+    always @(*) begin
+        if (OPMODE == 0) preStage_out = D + B;
+        else if (OPMODE == 1) preStage_out = D - B;
+    end
     
 endmodule
