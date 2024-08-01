@@ -53,8 +53,8 @@ initial begin
     OPMODE[6] = 1;
     @(negedge clk)
     @(negedge clk)
+    $stop; // tested and working well
 
-    $stop;
 end
     
 endmodule

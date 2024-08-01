@@ -45,8 +45,7 @@ module DSP48A1 #(
     assign B0_in = (B_INPUT === "DIRECT")? B:((B_INPUT === "CASCADE")? BCIN : 0); 
     VAL_REG_MUX#(.N(18),.REG_EN(DREG)) D_REG (.val(D),.rst(RSTD),.CE(CED),.clk(clk),.mux_out(D_r));
     VAL_REG_MUX#(.N(18),.REG_EN(B0REG)) B_REG (.val(B0_in),.rst(RSTB),.CE(CEB),.clk(clk),.mux_out(B0_r));
-
-    PreAdderSubtractor preStage (.D(D_r),.B(B0_r),.OPMODE(OPMODE_r[6]),.preStage_out(preStage_out));
+    PreAdderSubtractor preStage (.D(D_r),.B(B0_r),.OPMODE(OPMODE_r[6]),.preStage_out(preStage_out));   // tested
 
 
 endmodule
