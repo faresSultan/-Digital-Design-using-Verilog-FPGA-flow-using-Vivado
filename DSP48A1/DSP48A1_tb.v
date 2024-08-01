@@ -38,24 +38,23 @@ module DSP48A1_tb();
         end
     end
     
-//---------Pre-adder/sub Stage testbench-----------
-initial begin
-    RSTB = 1;RSTD = 1; CEOPMODE = 1;
-    @(negedge clk)
-    RSTB = 0; RSTD = 0;
-    CEB = 1; CED = 1;
-    BCIN = 500;
-    B = 450;
-    D = 500;    
-    OPMODE= 8'b00000000;
-    @(negedge clk)
-    @(negedge clk)
-    OPMODE[6] = 1;
-    @(negedge clk)
-    @(negedge clk)
-    $stop; // tested and working well
-
-end
+// //---------Pre-adder/sub Stage testbench-----------
+// initial begin
+//     RSTB = 1;RSTD = 1; CEOPMODE = 1;
+//     @(negedge clk)
+//     RSTB = 0; RSTD = 0;
+//     CEB = 1; CED = 1;
+//     BCIN = 500;
+//     B = 450;
+//     D = 500;    
+//     OPMODE= 8'b00000000;
+//     @(negedge clk)
+//     @(negedge clk)
+//     OPMODE[6] = 1;
+//     @(negedge clk)
+//     @(negedge clk)
+//     $stop; // tested and working well
+// end
     
 endmodule
  
