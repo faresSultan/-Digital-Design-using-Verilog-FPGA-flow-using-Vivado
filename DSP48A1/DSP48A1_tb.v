@@ -16,7 +16,7 @@ module DSP48A1_tb();
     wire CARRYOUT, CARRYOUTF;
 
    
-    DSP48A1 DUT_preAdder (.A(A),.B(B),.C(C),.D(D),
+    DSP48A1 DUT (.A(A),.B(B),.C(C),.D(D),
     .clk(clk),.CARRYIN(CARRYIN),
     .OPMODE(OPMODE),.BCIN(BCIN),
     .RSTA(RSTA),.RSTB(RSTB),.RSTC(RSTC),.RSTD(RSTD),
@@ -38,23 +38,38 @@ module DSP48A1_tb();
         end
     end
     
-// //---------Pre-adder/sub Stage testbench-----------
-// initial begin
-//     RSTB = 1;RSTD = 1; CEOPMODE = 1;
-//     @(negedge clk)
-//     RSTB = 0; RSTD = 0;
-//     CEB = 1; CED = 1;
-//     BCIN = 500;
-//     B = 450;
-//     D = 500;    
-//     OPMODE= 8'b00000000;
-//     @(negedge clk)
-//     @(negedge clk)
-//     OPMODE[6] = 1;
-//     @(negedge clk)
-//     @(negedge clk)
-//     $stop; // tested and working well
-// end
+//---------Pre-adder/sub Stage testbench-----------
+initial begin
+    RSTB = 1;RSTD = 1; CEOPMODE = 1;
+    RSTA = 1; RSTM = 1; CEM =1;CEA = 1;
+    @(negedge clk)
+    RSTB = 0; RSTD = 0;
+    CEB = 1; CED = 1;
+    BCIN = 500;
+    B = 450;
+    D = 500;    
+    OPMODE= 8'b00000000;
+    @(negedge clk)
+    @(negedge clk)
+    OPMODE[6] = 1;
+    @(negedge clk)
+    @(negedge clk)
+//    $stop; // tested and working well
+
+//---------Multiplier Stage testbench-----------
+    
+    RSTA = 0; RSTM = 0;
+    A = 2;
+    OPMODE[4] = 0;
+    @(negedge clk);
+    @(negedge clk);
+    OPMODE[4] = 1;
+    @(negedge clk);
+    @(negedge clk);
+    @(negedge clk);
+//   $stop; // tested and working well 
+
+end
     
 endmodule
  

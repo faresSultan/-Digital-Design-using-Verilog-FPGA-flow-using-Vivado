@@ -16,6 +16,13 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -25,32 +32,32 @@ R0
 cModel Technology
 dC:/questasim64_2021.1/examples
 T_opt
-!s110 1722550778
-VIce1UAGMC3DO`NnYzYHd83
+!s110 1722556923
+VWDSh]T81A;DR4IZmO?Qn40
 04 10 4 work DSP48A1_tb fast 0
-=2-ccf9e498c556-66ac09f9-f8-1ed0
+=1-ccf9e498c556-66ac21fa-205-66a8
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.1;73
 vDSP48A1
-Z2 !s110 1722550776
+Z2 !s110 1722556916
 !i10b 1
-!s100 Be[O@VU5l5?791UL6M3f=1
-I1jcL1miahN<:iQ7;^5jRa1
+!s100 a7<HIYRBa9HkPJeX@KLk00
+I5^>2?hW8kEZ@<RDQg[b_z2
 Z3 dD:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/DSP48A1
-Z4 w1722550772
+Z4 w1722556781
 Z5 8DSP48A1.v
 Z6 FDSP48A1.v
-!i122 31
-L0 1 52
+!i122 43
+L0 1 64
 Z7 VDg1SIo80bB@j0V0VzS_@n1
 Z8 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z9 !s108 1722550776.000000
+Z9 !s108 1722556916.000000
 Z10 !s107 DSP48A1_tb.v|DSP48A1.v|
 Z11 !s90 -reportprogress|300|DSP48A1.v|DSP48A1_tb.v|
 !i113 0
@@ -60,14 +67,14 @@ n@d@s@p48@a1
 vDSP48A1_tb
 R2
 !i10b 1
-!s100 @nl7bf:TiZjEWQVPYgP5N0
-I591[SzoL2^`JleZC44:?W1
+!s100 E:5R3ViU^7Wn^]bf`NPP<3
+IOWJ_JXIBWQabTg?80L]MF2
 R3
-w1722548000
+w1722556910
 8DSP48A1_tb.v
 FDSP48A1_tb.v
-!i122 31
-L0 1 60
+!i122 43
+L0 1 74
 R7
 R8
 r1
@@ -83,14 +90,14 @@ n@d@s@p48@a1_tb
 vPreAdderSubtractor
 R2
 !i10b 1
-!s100 L>aO9AYA[a82mKQSQ1mbZ1
-IV`5:cWi1_YWKNW7]86JHJ0
+!s100 `mj[c>;Y8YY0Na>1ZEH<d1
+IO6n5EnWQ_Whh9GY6bKPIz0
 R3
 R4
 R5
 R6
-!i122 31
-L0 84 11
+!i122 43
+L0 95 11
 R7
 R8
 r1
@@ -106,14 +113,14 @@ n@pre@adder@subtractor
 vVAL_REG_MUX
 R2
 !i10b 1
-!s100 9AfSnN0[EEDRWQlWUB5[20
-I]j7ATM`2K[nKI08VBbCN[3
+!s100 jJDGR4k=z3;>;L`K8JSXA2
+IA9dAH7Hh51:[QeDk_jC4U1
 R3
 R4
 R5
 R6
-!i122 31
-L0 56 26
+!i122 43
+L0 68 25
 R7
 R8
 r1
