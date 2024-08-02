@@ -132,7 +132,6 @@ module PostAdderSubtractor (operand1,operand2,Cin,OPMODE,postStage_out,Cout);
 endmodule
 
 module MUX_4_1_N # (parameter N = 48)(in0,in1,in2,in3,sel,out);
-
     input [N-1:0] in0,in1,in2,in3;
     input [1:0] sel;
     output reg [N-1:0] out;
@@ -144,7 +143,5 @@ module MUX_4_1_N # (parameter N = 48)(in0,in1,in2,in3,sel,out);
             'b10: out = in2; 
             'b11: out = in3; 
         endcase    
-    end
-    
-    
+    end  
 endmodule
