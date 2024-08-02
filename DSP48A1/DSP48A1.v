@@ -55,7 +55,8 @@ module DSP48A1 #(
     wire [17:0] B1_val,B1_r; 
     assign B1_val = (OPMODE_r[4] == 0)? (B0_r) : (preStage_out);
     VAL_REG_MUX#(.N(18),.REG_EN(B1REG)) B1_REG (.val(B1_val),.rst(RSTB),.CE(CEB),.clk(clk),.mux_out(B1_r)); //operand 2
-
+    assign BCOUT = B1_r;
+    
     wire [35:0] Mulitplier_out,M_r;
     assign Mulitplier_out = A1_r * B1_r; 
     VAL_REG_MUX#(.N(36),.REG_EN(MREG)) M_REG (.val(Mulitplier_out),.rst(RSTM),.CE(CEM),.clk(clk),.mux_out(M_r));
