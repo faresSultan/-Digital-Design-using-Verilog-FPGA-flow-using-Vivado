@@ -38,11 +38,15 @@ module DSP48A1_tb();
         end
     end
     
-//---------Pre-adder/sub Stage testbench-----------
+
 initial begin
     RSTB = 1;RSTD = 1; CEOPMODE = 1;
     RSTA = 1; RSTM = 1; CEM =1;CEA = 1;
+    RSTC = 1; RSTCARRYIN = 1; RSTP = 1;
+    CEC = 1; CECARRYIN = 1; CEP = 1;
     @(negedge clk)
+
+    //---------Pre-adder/sub Stage testbench-----------
     RSTB = 0; RSTD = 0;
     CEB = 1; CED = 1;
     BCIN = 500;
@@ -69,6 +73,27 @@ initial begin
     @(negedge clk);
 //   $stop; // tested and working well 
 
+
+//---------Post adder/subtractor Stage testbench-----------
+    RSTC = 0; RSTCARRYIN = 0; RSTP = 0;
+    C = 50; PCIN  = 100;  OPMODE[5] = 0;CARRYIN = 1;
+    
+    OPMODE[7] = 0; //add operation
+    {OPMODE[1],OPMODE[0]} = 2'b00;  // Operand1 = 0
+    {OPMODE[3],OPMODE[2]} = 2'b01;  // Operand2 = PCIN = 100
+    @(negedge clk);
+    @(negedge clk);   // 0+0+100 = 100 (Correct output)
+    
+    {OPMODE[1],OPMODE[0]} = 2'b01;  // Operand1 = M = 100
+    {OPMODE[3],OPMODE[2]} = 2'b11;  // Operand2 = C = 50
+    @(negedge clk);
+    @(negedge clk);   // 0+50+100 = 150 (Correct output)
+
+    {OPMODE[1],OPMODE[0]} = 2'b11;  // Operand1 = D:A:B = 0x1F4000080032
+    {OPMODE[3],OPMODE[2]} = 2'b10;  // Operand2 = P_old = 0x96
+    @(negedge clk);
+    @(negedge clk);   //  0x1F40000800C8 (Correct output)
+    $stop;
 end
     
 endmodule
