@@ -56,19 +56,35 @@ module DSP48A1 #(
     assign B1_val = (OPMODE_r[4] == 0)? (B0_r) : (preStage_out);
     VAL_REG_MUX#(.N(18),.REG_EN(B1REG)) B1_REG (.val(B1_val),.rst(RSTB),.CE(CEB),.clk(clk),.mux_out(B1_r)); //operand 2
     assign BCOUT = B1_r;
-    
+
     wire [35:0] Mulitplier_out,M_r;
     assign Mulitplier_out = A1_r * B1_r; 
     VAL_REG_MUX#(.N(36),.REG_EN(MREG)) M_REG (.val(Mulitplier_out),.rst(RSTM),.CE(CEM),.clk(clk),.mux_out(M_r));
     assign M = ~(~M_r);  // buffer                                                                      // tested
 
+// Post adder/subtractor stage
+    wire [47:0] postStage_op1,postStage_op2,postStage_out;
+    wire [47:0] C_r;
+    wire Cout;
+    wire CarryCascade,CARRYIN_r;
+    assign CarryCascade = (CARRYINSEL === "OPMODE5")? OPMODE_r[5]:((CARRYINSEL === "CARRYIN")? CARRYIN : 0);
+
+    VAL_REG_MUX#(.N(48),.REG_EN(CREG)) C_REG ( .val(C),.rst(RSTC),.CE(CEC),.clk(clk),.mux_out(C_r) );
+    VAL_REG_MUX#(.N(1),.REG_EN(CARRYINREG)) Cin_REG ( .val(CarryCascade),.rst(RSTCARRYIN),.CE(CECARRYIN),.clk(clk),.mux_out(CARRYIN_r) );
+    MUX_4_1_N X (.in0(48'h000000000000),.in1({12'h000,M_r}),.in2(P),.in3({D_r[11:0],A1_r[17:0],B1_r[17:0]}),.sel({OPMODE_r[1],OPMODE_r[0]}),.out(postStage_op1));
+    MUX_4_1_N Z (.in0(48'h000000000000),.in1(PCIN),.in2(P),.in3(C_r),.sel({OPMODE_r[3],OPMODE_r[2]}),.out(postStage_op2));
+
+    PostAdderSubtractor postStage (.operand1(postStage_op1),.operand2(postStage_op2),.Cin(CARRYIN_r),.OPMODE(OPMODE_r[7]),.postStage_out(postStage_out),.Cout(Cout));
+    VAL_REG_MUX#(.N(48),.REG_EN(PREG)) P_REG ( .val(postStage_out),.rst(RSTP),.CE(CEP),.clk(clk),.mux_out(P) ); // output (P)
+    assign PCOUT = P;     // output (PCOUT)
+    VAL_REG_MUX#(.N(1),.REG_EN(CARRYOUTREG)) CARRRYOUT_REG ( .val(Cout),.rst(RSTP),.CE(CEP),.clk(clk),.mux_out(CARRYOUT) ); // output (CARRYOUT)
+    assign CARRYOUTF = CARRYOUT;
 
 endmodule
 
 
 
 module VAL_REG_MUX #(parameter N = 1,parameter REG_EN = 1) (val,rst,CE,clk,mux_out);
-
     input [N-1:0] val;
     input clk,rst,CE;
     output reg [N-1:0] mux_out;
@@ -87,10 +103,7 @@ module VAL_REG_MUX #(parameter N = 1,parameter REG_EN = 1) (val,rst,CE,clk,mux_o
              end
               
         end    
-    endgenerate
-    
-      
-    
+    endgenerate  
 endmodule
 
 
@@ -102,6 +115,36 @@ module PreAdderSubtractor (D,B,OPMODE,preStage_out);
     always @(*) begin
         if (OPMODE == 0) preStage_out = D + B;
         else if (OPMODE == 1) preStage_out = D - B;
+    end  
+endmodule
+
+module PostAdderSubtractor (operand1,operand2,Cin,OPMODE,postStage_out,Cout);
+    input [47:0] operand1,operand2;
+    input OPMODE;  // 0 ->add, 1->sub
+    input Cin;  
+    output reg [47:0] postStage_out;
+    output reg Cout;
+
+    always @(*) begin
+        if (OPMODE == 0) {Cout,postStage_out} = operand1 + operand2 + Cin;
+        else if (OPMODE == 1) {Cout,postStage_out} = operand2 - (operand1+Cin);
+    end  
+endmodule
+
+module MUX_4_1_N # (parameter N = 48)(in0,in1,in2,in3,sel,out);
+
+    input [N-1:0] in0,in1,in2,in3;
+    input [1:0] sel;
+    output reg [N-1:0] out;
+
+    always @(*) begin
+        case (sel)
+            'b00: out = in0; 
+            'b01: out = in1; 
+            'b10: out = in2; 
+            'b11: out = in3; 
+        endcase    
     end
+    
     
 endmodule
