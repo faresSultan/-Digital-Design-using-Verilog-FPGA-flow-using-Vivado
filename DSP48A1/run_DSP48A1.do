@@ -1,10 +1,8 @@
 vlib work
 vlog DSP48A1.v DSP48A1_tb.v
 vsim -voptargs=+acc work.DSP48A1_tb
-
 add wave -position insertpoint  \
 sim:/DSP48A1_tb/clk
-
 add wave -position insertpoint  \
 sim:/DSP48A1_tb/A \
 sim:/DSP48A1_tb/B \
@@ -12,7 +10,6 @@ sim:/DSP48A1_tb/D \
 sim:/DSP48A1_tb/C \
 sim:/DSP48A1_tb/PCIN \
 sim:/DSP48A1_tb/OPMODE \
-sim:/DSP48A1_tb/clk \
 sim:/DSP48A1_tb/CARRYIN \
 sim:/DSP48A1_tb/BCIN \
 sim:/DSP48A1_tb/RSTA \
@@ -36,7 +33,6 @@ sim:/DSP48A1_tb/PCOUT \
 sim:/DSP48A1_tb/P \
 sim:/DSP48A1_tb/M \
 sim:/DSP48A1_tb/CARRYOUT
-
 add wave -position insertpoint sim:/DSP48A1_tb/DUT/postStage/*
 add wave -position insertpoint sim:/DSP48A1_tb/DUT/B1_REG/mux_out
 run -all
