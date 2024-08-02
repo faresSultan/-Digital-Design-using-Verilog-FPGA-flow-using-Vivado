@@ -29,16 +29,14 @@ module DSP48A1_tb();
     .BCOUT(BCOUT),.PCOUT(PCOUT),.P(P),.M(M),.CARRYOUT(CARRYOUT),.CARRYOUTF(CARRYOUTF));
 
 
-
+    //--------clk init------------
      initial begin
         clk = 0;
         forever begin
              #1;
              clk = !clk;
         end
-    end
-    
-
+    end 
 initial begin
     RSTB = 1;RSTD = 1; CEOPMODE = 1;
     RSTA = 1; RSTM = 1; CEM =1;CEA = 1;
