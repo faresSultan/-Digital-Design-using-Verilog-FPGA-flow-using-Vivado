@@ -11,6 +11,7 @@ tx_valid,rx_data,tx_data,ss_n);
   output reg[9:0] rx_data;
   //reg [7:0] tx_data_r;
   //reg[9:0] rx_data_r;
+  (* fsm_encoding = "gray"*)
   reg [2:0] cs , ns;
   reg address_sent;
   //reg data_sent;
