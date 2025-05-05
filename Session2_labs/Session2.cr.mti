@@ -1,0 +1,18 @@
+{D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/mux3_1_always.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/mux3_1_always.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module mux3_1_always
+
+Top level modules:
+	mux3_1_always
+
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/mux3_1_assign.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/mux3_1_assign.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module mux3_1_assign
+
+Top level modules:
+	mux3_1_assign
+
+} {} {}} {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Session2.v} {1 {vlog -work work -vopt -stats=none {D:/Digital IC design/-Digital-Design-using-Verilog-FPGA-flow-using-Vivado/Session2_labs/Session2.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+
+} {} {}}

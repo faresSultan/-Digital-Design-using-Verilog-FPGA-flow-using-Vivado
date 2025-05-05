@@ -1,0 +1,8 @@
+{D:/ASUFOE/Digital design/Eng. kareem design diploma/Session1_labs/session1.v} {1 {vlog -work work -vopt -stats=none {D:/ASUFOE/Digital design/Eng. kareem design diploma/Session1_labs/session1.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}}

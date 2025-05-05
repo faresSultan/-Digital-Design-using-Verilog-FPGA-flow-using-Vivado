@@ -1,0 +1,48 @@
+
+module Q1_tb ();
+
+reg  A_tb,B_tb,C_tb,S_tb;
+reg [2:0] D_tb;
+wire out_tb,out_bar_tb;
+reg out_exp,out_bar_exp;
+
+Func func_tb (.A(A_tb),.B(B_tb),.C(C_tb),.D(D_tb),.Sel(S_tb),.Out(out_tb),.Out_bar(out_bar_tb));
+
+integer i;
+
+    initial begin
+        for(i=0;i<50;i = i+1)begin
+            A_tb = $random;
+            B_tb = $random;
+            C_tb = $random;
+            D_tb[0] = $random;
+            D_tb[1] = $random;
+            D_tb[2] = $random;
+            S_tb = $random;
+    
+            if (S_tb == 0) begin
+                out_exp = (D_tb[0] & D_tb[1] ) | (D_tb[2]);
+             end
+             else if (S_tb == 1) begin
+                
+                out_exp = ~(A_tb ^ B_tb ^ C_tb);
+             end
+
+            out_bar_exp = ~out_exp;
+             #10;
+            if ((out_exp != out_tb) || (out_bar_exp != out_bar_tb)) begin
+                $display("Error - Output is incorrect\n");
+
+                #10;
+                $stop; 
+            end
+            //#10;   
+        end
+        $display("Passed");
+            $stop;
+    end
+
+
+
+    
+endmodule
